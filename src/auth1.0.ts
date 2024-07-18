@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as crypto from 'crypto';
 import * as dotenv from 'dotenv';
-import { createOAuthHeader } from './outh2'; // Adjust the import path as necessary
+import { createOAuthHeader } from './outh'; // Adjust the import path as necessary
 
 dotenv.config(); // Load environment variables from .env file
 

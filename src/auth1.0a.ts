@@ -2,7 +2,7 @@
 import { percentEncode } from './utils';
 import axios, { AxiosResponse } from 'axios';
 import readline from 'readline';
-import { createOAuthHeader } from './outh2';
+import { createOAuthHeader } from './outh';
 import dotenv from 'dotenv';
 dotenv.config();
 
