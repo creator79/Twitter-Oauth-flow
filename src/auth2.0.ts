@@ -6,12 +6,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const port = 3001;
+const port = 3000;
 
 // Twitter API credentials
 const clientId = process.env.TWITTER_CLIENT_ID;
 const clientSecret = process.env.TWITTER_CLIENT_SECRET;
-const redirectUri = 'http://localhost:3001/callback';
+const redirectUri = 'http://localhost:3000/callback';
 
 // Generate a random state for CSRF protection
 const state = crypto.randomBytes(16).toString('hex');
@@ -49,7 +49,7 @@ app.get('/callback', async (req, res) => {
     });
 
     const { access_token } = tokenResponse.data;
-    console.log("access_token",access_token)
+    console.log("Bearer",access_token)
 
     // Use the access token to make API requests
     const userResponse = await axios.get('https://api.twitter.com/2/users/me', {
